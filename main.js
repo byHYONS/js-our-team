@@ -40,11 +40,9 @@ const team = [
 
 ];
 
-// faccio un ciclo for...in per iterare l'arrey d'oggetti:
-for (let key in team){
-    // console.log(key);
-    // console.log(team[key]);
-    console.log(team[key]['foto']);
+// faccio un ciclo for per iterare l'arrey d'oggetti:
+for (let i = 0; i < team.length; i++) {
+    console.log(team[i]['foto']);
 
     // creo il div dentro al quale costruisco le mie card:
     const myCards = document.createElement('div');
@@ -52,23 +50,55 @@ for (let key in team){
 
     // creo l'immagine dei membri:
     const myImg = document.createElement('img');
-    myImg.src = `./img/${team[key]['foto']}`;
-    myImg.alt = team[key]['nome'];
+    myImg.src = `./img/${team[i]['foto']}`;
+    myImg.alt = team[i]['nome'];
     
 
     // creo h2 per stampare il nome dei membri:
     const nomeMembro = document.createElement('h2');
-    nomeMembro.textContent = `${team[key]['nome']}`;
+    nomeMembro.textContent = `${team[i]['nome']}`;
 
     // creo il p per la descrizione del ruolo:
     const ruoloMembro = document.createElement('p');
-    ruoloMembro.textContent = `${team[key].ruolo}`;
+    ruoloMembro.textContent = `${team[i].ruolo}`;
 
     // appendo tutto su relativi parents:
     myCards.append(myImg);
     myCards.append(nomeMembro);
     myCards.append(ruoloMembro);
     containerCards.append(myCards);
-}
+};
+
+
+// // faccio un ciclo for...in per iterare l'arrey d'oggetti:
+// for (let key in team){
+//     // console.log(key);
+//     // console.log(team[key]);
+//     console.log(team[key]['foto']);
+
+//     // creo il div dentro al quale costruisco le mie card:
+//     const myCards = document.createElement('div');
+//     myCards.classList.add('cards');
+
+//     // creo l'immagine dei membri:
+//     const myImg = document.createElement('img');
+//     myImg.src = `./img/${team[key]['foto']}`;
+//     myImg.alt = team[key]['nome'];
+    
+
+//     // creo h2 per stampare il nome dei membri:
+//     const nomeMembro = document.createElement('h2');
+//     nomeMembro.textContent = `${team[key]['nome']}`;
+
+//     // creo il p per la descrizione del ruolo:
+//     const ruoloMembro = document.createElement('p');
+//     ruoloMembro.textContent = `${team[key].ruolo}`;
+
+//     // appendo tutto su relativi parents:
+//     myCards.append(myImg);
+//     myCards.append(nomeMembro);
+//     myCards.append(ruoloMembro);
+//     containerCards.append(myCards);
+// }
 
 // FINE

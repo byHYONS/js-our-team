@@ -29,7 +29,7 @@ Organizzare i singoli membri in card/schede.
 
 3. faccio un ciclo for...in per iterare l'arrey d'oggetti:
 ```
-for (let key in team){ ... }
+for (let = 0; i < team.length; i++) { ... }
 ```
 
 4. farò il `console.log` di tutti gli elementi del team, così come richiesto dall'esercizio;
@@ -44,19 +44,19 @@ for (let key in team){ ... }
 ```
     const myImg = document.createElement('img');
     myImg.src = `./img/${team[key]['foto']}`;
-    myImg.alt = team[key]['nome'];
+    myImg.alt = team[i]['nome'];
 ```
 
 7. creo h2 per stampare il nome dei membri con la proprietà `textContent` e interpolando il nome del membro:
 ```
     const nomeMembro = document.createElement('h2');
-    nomeMembro.textContent = `${team[key]['nome']}`;
+    nomeMembro.textContent = `${team[i]['nome']}`;
 ```
 
 8. creo il p per la descrizione del ruolo sempre utilizzando `textContent` e interpolando il ruolo del membro:
 ```
     const ruoloMembro = document.createElement('p');
-    ruoloMembro.textContent = `${team[key].ruolo}`;
+    ruoloMembro.textContent = `${team[i].ruolo}`;
 ```
 
 9. infine, appendo tutto sui relativi parents:
