@@ -23,6 +23,8 @@ Trasformare la stringa foto in una immagine effettiva.
 Organizzare i singoli membri in card/schede.
 
 ## Svolgimento:
+1. definsco una variabile di arrey d'oggetti;
+2. 
 
 
 
