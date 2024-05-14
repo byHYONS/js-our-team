@@ -24,8 +24,48 @@ Organizzare i singoli membri in card/schede.
 
 ## Svolgimento:
 1. definsco una variabile di arrey d'oggetti;
-2. 
 
+2. definisco variabile per leggere l'elemento del DOM sul quale appenderò le card;
+
+3. faccio un ciclo for...in per iterare l'arrey d'oggetti:
+```
+for (let key in team){ ... }
+```
+
+4. farò il `console.log` di tutti gli elementi del team, così come richiesto dall'esercizio;
+
+5. creo il div dentro al quale costruisco le mie card:
+```
+    const myCards = document.createElement('div');
+    myCards.classList.add('cards');
+```
+
+6. creo l'immagine dei membri, poi con `innerHTML` faccio una interpolazione richiamando l'immagine e aggiungendo il nome al valore `alt`:
+```
+    const myImg = document.createElement('img');
+    myImg.src = `./img/${team[key]['foto']}`;
+    myImg.alt = team[key]['nome'];
+```
+
+7. creo h2 per stampare il nome dei membri con la proprietà `textContent` e interpolando il nome del membro:
+```
+    const nomeMembro = document.createElement('h2');
+    nomeMembro.textContent = `${team[key]['nome']}`;
+```
+
+8. creo il p per la descrizione del ruolo sempre utilizzando `textContent` e interpolando il ruolo del membro:
+```
+    const ruoloMembro = document.createElement('p');
+    ruoloMembro.textContent = `${team[key].ruolo}`;
+```
+
+9. infine, appendo tutto sui relativi parents:
+```
+    myCards.append(myImg);
+    myCards.append(nomeMembro);
+    myCards.append(ruoloMembro);
+    containerCards.append(myCards);
+```
 
 
 ##### FINE

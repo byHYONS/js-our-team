@@ -1,7 +1,7 @@
 // reset
 'use strict';
 
-// vado in lettura del DOM:
+// definisco variabile per leggere l'elemento del DOM sul quale appenderò le card:
 const containerCards = document.querySelector('.container');
 console.log(containerCards);
 
@@ -40,7 +40,7 @@ const team = [
 
 ];
 
-
+// faccio un ciclo for...in per iterare l'arrey d'oggetti:
 for (let key in team){
     // console.log(key);
     // console.log(team[key]);
@@ -52,7 +52,9 @@ for (let key in team){
 
     // creo l'immagine dei membri:
     const myImg = document.createElement('img');
-    myImg.innerHTML = `<img src="./img/${team[key]['foto']}" alt="${team[key]['nome']}">`;
+    myImg.src = `./img/${team[key]['foto']}`;
+    myImg.alt = team[key]['nome'];
+    
 
     // creo h2 per stampare il nome dei membri:
     const nomeMembro = document.createElement('h2');
