@@ -40,7 +40,7 @@ for (let key in team){ ... }
     myCards.classList.add('cards');
 ```
 
-6. creo l'immagine dei membri, poi con `innerHTML` faccio una interpolazione richiamando l'immagine e aggiungendo il nome al valore `alt`:
+6. creo l'immagine dei membri, poi con gli attributi `.src` e `.alt` faccio una interpolazione richiamando l'immagine e aggiungendo il nome al valore alt:
 ```
     const myImg = document.createElement('img');
     myImg.src = `./img/${team[key]['foto']}`;
